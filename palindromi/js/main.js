@@ -9,30 +9,32 @@
 
 
 const wordUser = prompt('inserisci una parola e ti dirò se è palindroma');
-const letters = wordUser.split('');
-const palindromeCheckExecut = palindromeCheck(letters);
-console.log(letters);
+const palindromeCheckExecut = palindromeCheck(wordUser);
+
 
 function palindromeCheck(word) {
 
-    let array = '';
-    let arrayRev = '';
+
+    let palindrome ;
+
+    let letters = word.split('').join().toLowerCase();
+    console.log('letters =' + letters);
+    console.log('letters =' + typeof letters);
     
-    for(let f = 0; f < word.length; f++) {
-        console.log(word[f]);
-        array = word[f];
-    }
 
-    for (let r = word.length -1; r >= 0 ; r--) {
-        console.log(word[r]);
-        arrayRev = word[r];
-    }
+    let lettersRev = word.split('').reverse().join().toLowerCase();
+    console.log('lettersRev =' + lettersRev);
+    console.log('lettersRev =' + typeof lettersRev);
 
-    if (array == arrayRev) {
+    if (letters == lettersRev) {
         alert('è palindroma');
+        palindrome = true;
     } else {
         alert ('non è palindroma');
+        palindrome = false;
     }
+
+    return palindrome;
 
 
 }
