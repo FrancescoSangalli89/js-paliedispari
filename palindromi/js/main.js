@@ -9,24 +9,57 @@
 
 
 const wordUser = prompt('inserisci una parola e ti dirò se è palindroma');
-const palindromeCheckExecut = palindromeCheck(wordUser);
 
+// const palindromeCheckExecut = palindromeCheck(wordUser);
+
+// function palindromeCheck(word) {
+
+//     let palindrome ;
+
+//     let letters = word.split('').join().toLowerCase();
+//     console.log('letters =' + letters);
+//     console.log('letters =' + typeof letters);
+    
+
+//     let lettersRev = word.split('').reverse().join().toLowerCase();
+//     console.log('lettersRev =' + lettersRev);
+//     console.log('lettersRev =' + typeof lettersRev);
+
+//     if (letters == lettersRev) {
+//         alert('è palindroma');
+//         palindrome = true;
+//     } else {
+//         alert ('non è palindroma');
+//         palindrome = false;
+//     }
+
+//     return palindrome;
+
+// }
+
+const letters = wordUser.split('');
+
+const palindromeCheckExecut = palindromeCheck(letters);
+console.log(letters);
 
 function palindromeCheck(word) {
 
-
     let palindrome ;
 
-    let letters = word.split('').join().toLowerCase();
-    console.log('letters =' + letters);
-    console.log('letters =' + typeof letters);
-    
+    let array = '';
+    let arrayRev = '';
 
-    let lettersRev = word.split('').reverse().join().toLowerCase();
-    console.log('lettersRev =' + lettersRev);
-    console.log('lettersRev =' + typeof lettersRev);
+    for(let f = 0; f < word.length; f++) {
+        console.log(word[f]);
+        array = word[f];
+    }
 
-    if (letters == lettersRev) {
+    for (let r = word.length -1; r >= 0 ; r--) {
+        console.log(word[r]);
+        arrayRev = word[r];
+    }
+
+    if (array == arrayRev) {
         alert('è palindroma');
         palindrome = true;
     } else {
@@ -36,5 +69,4 @@ function palindromeCheck(word) {
 
     return palindrome;
 
-
-}
+} 
