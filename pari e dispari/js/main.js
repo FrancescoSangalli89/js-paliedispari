@@ -17,6 +17,12 @@ console.log(sum);
 
 const oddEvenResult = oddEven(sum);
 
+if (oddEvenResult == playerChoice) {
+    alert ('Hai vinto tu!');
+} else {
+    alert('Ha vinto il computer!');
+}
+
 
 
 function randomNumber(min, max) {
@@ -45,10 +51,4 @@ function oddEven(numberSum) {
     }
 
     return result;
-}
-
-if (oddEvenResult == playerChoice) {
-    alert ('Hai vinto tu!');
-} else {
-    alert('Ha vinto il computer!');
 }
