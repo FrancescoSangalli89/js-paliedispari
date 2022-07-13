@@ -9,12 +9,15 @@ const playerChoice = prompt('scegli pari o dispari');
 
 const playerNumber = parseInt(prompt('Scegli un numero tra 1 e 5'));
 
-const minComputer = 1;
-
-const maxComputer = 5;
-
-const randomNumberResult = randomNumber(minComputer, maxComputer);
+const randomNumberResult = randomNumber(1, 5);
 console.log('numero computer: ' + randomNumberResult);
+
+const sum = playerNumber + randomNumberResult;
+console.log(sum);
+
+const oddEvenResult = oddEven(sum);
+
+
 
 function randomNumber(min, max) {
 
@@ -30,12 +33,6 @@ function randomNumber(min, max) {
     }
 
 }
-
-const sum = playerNumber + randomNumberResult;
-console.log(sum);
-
-const oddEvenResult = oddEven(sum);
-
 
 function oddEven(numberSum) {
     
